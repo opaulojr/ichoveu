@@ -17,11 +17,19 @@ body {
   background-color: var(--background-color);
 }
 
+body.dark-theme {
+  --background-color: #121212;
+  --text-color: #fff;
+  --border: #333;
+  --icon-color: #fff;
+  --theme-icon-color: #FC3;
+}
+
 header {
   display: flex;
   height: 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0 20px;
   border-radius: 10px;
   background-color: var(--header-background);
@@ -66,6 +74,17 @@ header > form > input {
 i.search {
   color: var(--icon-color);
   font-size: 32px;
+}
+
+#theme-toggle {
+  border: none;
+  background-color: #0097db;
+  cursor: pointer;
+}
+
+i.theme {
+  color: var(--theme-icon-color);
+  font-size: 48px;
 }
 
 @media (width <= 600px) {
