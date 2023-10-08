@@ -1,0 +1,79 @@
+:root {
+  --header-background: #0097db;
+  --background-color: #fafafa;
+  --text-color: #747474;
+  --border: #bebebe;
+  --icon-color: #000;
+  --theme-icon-color: #000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 5px;
+  background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: var(--header-background);
+  gap: 32px;
+}
+
+header > form {
+  display: flex;
+  width: 80%;
+  max-width: 400px;
+  align-items: center;
+  border-radius: 999px;
+  background-color: var(--background-color);
+}
+
+header > form > input {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--background-color);
+  border-bottom-left-radius: 999px;
+  border-top-left-radius: 999px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+#search-button {
+  display: flex;
+  width: 80px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-left: 1px solid var(--border);
+  background-color: var(--background-color);
+  border-bottom-right-radius: 999px;
+  border-top-right-radius: 999px;
+  cursor: pointer;
+}
+
+i.search {
+  color: var(--icon-color);
+  font-size: 32px;
+}
+
+@media (width <= 600px) {
+  header > form > input {
+    border-radius: 999px;
+  }
+
+  #search-button {
+    display: none;
+  }
+}
