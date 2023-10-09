@@ -10,8 +10,8 @@
 <body>
   <header>
     <img src="./src/assets/iChoveuIcon.png" alt="page icon">
-    <form>
-      <input type="text" placeholder="Search for city">
+    <form id="search-form">
+      <input type="text" placeholder="Search for city" id="search-input">
       <button type="submit" id="search-button">
         <i class="material-symbols-outlined search">
           search
@@ -24,6 +24,10 @@
       </i>
     </button>
   </header>
+
+  <main>
+    <ul id="cities"></ul>
+  </main>
 </body>
 <script type="module" src="src/main.js"></script>
 </html>
