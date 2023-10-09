@@ -12,8 +12,8 @@ export const searchCities = async (city) => {
     if (result.length > 0) return result;
 
     Swal.fire({
-      title: 'Nenhuma cidade encontrada',
-      text: 'Tente outro nome',
+      title: 'No cities found',
+      text: 'Try another name',
       icon: 'error',
       confirmButtonText: 'OK',
       confirmButtonColor: '#0097db',
@@ -22,7 +22,7 @@ export const searchCities = async (city) => {
     return [];
   } catch (error) {
     Swal.fire({
-      title: 'Ocorreu um erro ao buscar as cidades',
+      title: 'An error occurred when searching for cities',
       text: error.message,
       icon: 'error',
       confirmButtonText: 'OK',
@@ -44,7 +44,7 @@ export const getWeatherByCity = async (cityURL) => {
     return { temp, condition: condition.text, icon: condition.icon };
   } catch (error) {
     Swal.fire({
-      title: 'Ocorreu um erro ao obter informações de tempo para a cidade',
+      title: 'An error occurred while obtaining weather information for the city',
       text: error.message,
       icon: 'error',
       confirmButtonText: 'OK',
