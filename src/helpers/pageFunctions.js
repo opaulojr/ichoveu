@@ -27,7 +27,7 @@ function createCityElement(cityInfo) {
   headingContainer.appendChild(nameElement);
   headingContainer.appendChild(countryElement);
 
-  const weatherContainer = createElement('div', 'weather-container');
+  const weatherContainer = createElement('div', 'city-weather-container');
   const tempElement = createElement('p', 'city-temp', `${temp}º`);
   const conditionElement = createElement('p', 'city-condition', condition);
   weatherContainer.appendChild(conditionElement);
