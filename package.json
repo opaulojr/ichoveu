@@ -9,6 +9,7 @@
   "author": "Paulo",
   "license": "ISC",
   "dependencies": {
+    "sweetalert2": "^11.7.32",
     "vite": "^4.4.11"
   },
   "devDependencies": {
