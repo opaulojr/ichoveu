@@ -25,6 +25,7 @@ body.dark-theme {
   --theme-icon-color: #FC3;
 }
 
+
 header {
   display: flex;
   height: 80px;
@@ -34,6 +35,10 @@ header {
   border-radius: 10px;
   background-color: var(--header-background);
   gap: 32px;
+}
+
+header > img {
+  width: 64px;
 }
 
 header > form {
@@ -47,6 +52,7 @@ header > form {
 
 header > form > input {
   width: 100%;
+  height: 30px;
   padding: 10px 20px;
   border: none;
   background-color: var(--background-color);
@@ -88,6 +94,10 @@ i.theme {
 }
 
 @media (width <= 600px) {
+  header > img {
+    display: none;
+  }
+
   header > form > input {
     border-radius: 999px;
   }

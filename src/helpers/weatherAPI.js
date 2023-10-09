@@ -16,6 +16,7 @@ export const searchCities = async (city) => {
       text: 'Tente outro nome',
       icon: 'error',
       confirmButtonText: 'OK',
+      confirmButtonColor: '#0097db',
     });
 
     return [];
@@ -25,6 +26,7 @@ export const searchCities = async (city) => {
       text: error.message,
       icon: 'error',
       confirmButtonText: 'OK',
+      confirmButtonColor: '#0097db',
     });
 
     return [];
@@ -46,6 +48,7 @@ export const getWeatherByCity = async (cityURL) => {
       text: error.message,
       icon: 'error',
       confirmButtonText: 'OK',
+      confirmButtonColor: '#0097db',
     });
 
     return null;
