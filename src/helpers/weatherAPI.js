@@ -54,3 +54,21 @@ export const getWeatherByCity = async (cityURL) => {
     return null;
   }
 };
+
+export const getForecastByCity = async (cityURL) => {
+  const DAYS = 7;
+  const URL = `http://api.weatherapi.com/v1/forecast.json?lang=pt&key=${TOKEN}&q=${cityURL}&days=${DAYS}`;
+
+  const response = await fetch(URL);
+  const result = await response.json();
+
+  const forecastList = result.forecast.forecastday.map((day) => ({
+    date: day.date,
+    maxTemp: day.day.maxtemp_c,
+    minTemp: day.day.mintemp_c,
+    condition: day.day.condition.text,
+    icon: day.day.condition.icon,
+  }));
+
+  return forecastList;
+};
