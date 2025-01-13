@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 const TOKEN = import.meta.env.VITE_TOKEN;
 
 export const searchCities = async (city) => {
-  const URL = `http://api.weatherapi.com/v1/search.json?lang=pt&key=${TOKEN}&q=${city}`;
+  const URL = `https://api.weatherapi.com/v1/search.json?lang=pt&key=${TOKEN}&q=${city}`;
 
   try {
     const response = await fetch(URL);
