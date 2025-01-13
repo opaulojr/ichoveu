@@ -34,7 +34,7 @@ export const searchCities = async (city) => {
 };
 
 export const getWeatherByCity = async (cityURL) => {
-  const URL = `http://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${cityURL}`;
+  const URL = `https://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${cityURL}`;
 
   try {
     const response = await fetch(URL);
@@ -57,7 +57,7 @@ export const getWeatherByCity = async (cityURL) => {
 
 export const getForecastByCity = async (cityURL) => {
   const DAYS = 7;
-  const URL = `http://api.weatherapi.com/v1/forecast.json?lang=pt&key=${TOKEN}&q=${cityURL}&days=${DAYS}`;
+  const URL = `https://api.weatherapi.com/v1/forecast.json?lang=pt&key=${TOKEN}&q=${cityURL}&days=${DAYS}`;
 
   const response = await fetch(URL);
   const result = await response.json();
